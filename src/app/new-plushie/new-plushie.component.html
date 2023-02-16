@@ -1,0 +1,15 @@
+<div class='container'>
+    <div class='mb-2'>
+      <label class='form-label' for='name'>Name</label>
+      <input type='text' class='form-control' id='name' [(ngModel)]="newPlushie.name">
+    </div>
+    <div class='mb-2'>
+      <label class='form-label' for='size'>Size (cm)</label>
+      <input type='number' class='form-control' id='size' [(ngModel)]="newPlushie.size">
+    </div>
+    <div class='alert alert-danger' *ngIf="errormsg!=''"> {{errormsg}} </div>
+    <div class='mb-2'>
+      <input type='button' class='btn btn-primary' value='New plushie' (click)="onSubmit()">
+    </div>
+  </div>
+  

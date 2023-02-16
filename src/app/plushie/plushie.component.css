@@ -1,0 +1,14 @@
+#container {
+  padding: 10px;
+  border: 1px solid lightgrey;
+  clear: both;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+h3, p {
+  font-size: 1rem;
+  padding-right: 10px;
+}
+/*# sourceMappingURL=plushie.component.css.map */
