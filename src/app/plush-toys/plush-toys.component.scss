@@ -1,0 +1,22 @@
+@use 'colors';
+
+blockquote {
+    background-color: colors.$quote-backgound;
+    color: colors.$quote-text;
+    text-align: center;
+    margin: 2rem;
+    border-radius: 15px;
+}
+
+ul li{
+    color: colors.$list-text;
+}
+
+img{
+    width: 25%;
+    float: right;
+}
+
+ul li:first-child{
+    font-weight:800;
+}
