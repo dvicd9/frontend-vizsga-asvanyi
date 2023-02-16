@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { catchError, throwError } from 'rxjs';
 import Plushie from './Plushie';
 
 @Component({
@@ -17,11 +16,13 @@ export class NewPlushieComponent {
 
   onSubmit(){
     this.errormsg = '';
-    let tempPlushie: Plushie = new Plushie(this.newPlushie.name, this.newPlushie.size);
-    catchError( (error: Error) => {
-      return this.errormsg = error.message;
-    });
-    this.plushies.push(tempPlushie);
+    try{
+      let tempPlushie: Plushie = new Plushie(this.newPlushie.name, this.newPlushie.size);
+      this.plushies.push(tempPlushie);
+    }
+    catch(error: any){
+      this.errormsg = error.message;
+    }
     this.newPlushie = {
       name: '',
       size: 0
